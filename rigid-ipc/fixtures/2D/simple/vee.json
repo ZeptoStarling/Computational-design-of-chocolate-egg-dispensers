@@ -1,0 +1,78 @@
+{
+    "scene_type": "distance_barrier_rb_problem",
+    "timestep": 0.01,
+    "distance_barrier_constraint": {
+        "initial_barrier_activation_distance": 0.01,
+        "detection_method": "brute_force",
+        "use_distance_hashgrid": true,
+        "custom_hashgrid_cellsize": -1
+    },
+    "homotopy_solver": {
+        "min_barrier_epsilon": 0.0001
+    },
+    "rigid_body_problem": {
+        "rigid_bodies": [
+            {
+                "vertices": [
+                    [
+                        -10,
+                        0
+                    ],
+                    [
+                        10,
+                        0
+                    ]
+                ],
+                "is_dof_fixed": [
+                    true,
+                    true,
+                    true
+                ],
+                "edges": [
+                    [
+                        0,
+                        1
+                    ]
+                ]
+            },
+            {
+                "vertices": [
+                    [
+                        0,
+                        0.1
+                    ],
+                    [
+                        0.5,
+                        1.5
+                    ],
+                    [
+                        -0.5,
+                        1.5
+                    ]
+                ],
+                "is_dof_fixed": [
+                    false,
+                    false,
+                    false
+                ],
+                "edges": [
+                    [
+                        0,
+                        1
+                    ],
+                    [
+                        0,
+                        2
+                    ]
+                ],
+                "linear_velocity": [
+                    0.0,
+                    -1.0
+                ],
+                "angular_velocity": [
+                    0.0
+                ]
+            }
+        ]
+    }
+}

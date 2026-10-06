@@ -1,0 +1,11 @@
+{
+    "scene_type": "distance_barrier_rb_problem",
+    "rigid_body_problem": {
+        "rigid_bodies": [{
+            "mesh": "2D/volumetric-link.obj",
+            "linear_velocity": [0.0, 0.0],
+            "angular_velocity": [0.0]
+        }],
+        "gravity": [0.0, 0.0]
+    }
+}

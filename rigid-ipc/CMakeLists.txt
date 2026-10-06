@@ -1,0 +1,321 @@
+set(CMAKE_POLICY_VERSION_MINIMUM 3.5)
+
+# Detects whether this is a top-level project
+get_directory_property(HAS_PARENT PARENT_DIRECTORY)
+if(HAS_PARENT)
+    set(RIGID_IPC_TOPLEVEL_PROJECT OFF)
+else()
+    set(RIGID_IPC_TOPLEVEL_PROJECT ON)
+endif()
+
+# Check required CMake version
+set(REQUIRED_CMAKE_VERSION "3.14.0")
+if(RIGID_IPC_TOPLEVEL_PROJECT)
+    cmake_minimum_required(VERSION ${REQUIRED_CMAKE_VERSION})
+else()
+    # Don't use cmake_minimum_required here to avoid implicitly overriding parent policies
+    if(${CMAKE_VERSION} VERSION_LESS ${REQUIRED_CMAKE_VERSION})
+        message(FATAL_ERROR "CMake required version to build Rigid IPC is ${REQUIRED_CMAKE_VERSION}")
+    endif()
+endif()
+
+# Include user-provided default options if available. We do that before the main
+# `project()` so that we can define the C/C++ compilers from the option file.
+if(EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/RigidIPCOptions.cmake)
+    message(STATUS "Using local options file: ${CMAKE_CURRENT_SOURCE_DIR}/RigidIPCOptions.cmake")
+    include(${CMAKE_CURRENT_SOURCE_DIR}/RigidIPCOptions.cmake)
+endif()
+
+################################################################################
+
+project(RigidIPC
+        DESCRIPTION "Robust, intersection-free, simulations of rigid bodies."
+        LANGUAGES CXX)
+
+option(RIGID_IPC_WITH_UNIT_TESTS             "Build unit-tests"      ${RIGID_IPC_TOPLEVEL_PROJECT})
+option(RIGID_IPC_WITH_OPENGL                 "Build GUI"             ${RIGID_IPC_TOPLEVEL_PROJECT})
+option(RIGID_IPC_WITH_TOOLS                  "Build tools"           ${RIGID_IPC_TOPLEVEL_PROJECT})
+option(RIGID_IPC_WITH_PROFILING              "Profile functions"                               OFF)
+option(RIGID_IPC_WITH_COMPARISONS            "Build comparisons"                               OFF)
+option(RIGID_IPC_WITH_SIMD                   "Enable SIMD"                                     OFF)
+option(RIGID_IPC_WITH_PYTHON                 "Build Python bindings"                           OFF)
+option(RIGID_IPC_WITH_DERIVATIVE_CHECK      "Check derivatives using finite differences"       OFF)
+
+# Set default minimum C++ standard
+if(RIGID_IPC_TOPLEVEL_PROJECT)
+    set(CMAKE_CXX_STANDARD 17)
+    set(CMAKE_CXX_STANDARD_REQUIRED ON)
+    set(CMAKE_CXX_EXTENSIONS OFF)
+endif()
+
+list(APPEND CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake/rigid_ipc/")
+list(APPEND CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake/recipes/")
+list(APPEND CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake/find/")
+
+include(rigid_ipc_cpm_cache)
+
+# Color output
+include(rigid_ipc_use_colors)
+
+include(rigid_ipc_autogen)
+
+################################################################################
+# External project settings
+################################################################################
+
+set(TIGHT_INCLUSION_WITH_NO_ZERO_TOI OFF CACHE BOOL "Enable refinement if CCD produces a zero ToI" FORCE)
+
+################################################################################
+# Rigid IPC Library
+################################################################################
+
+add_library(ipc_rigid
+  src/autodiff/autodiff.cpp
+
+  src/utils/sinc.cpp
+
+  src/ccd/impact.cpp
+  src/ccd/ccd.cpp
+  src/ccd/linear/broad_phase.cpp
+  src/ccd/piecewise_linear/time_of_impact.cpp
+  src/interval/filib_rounding.cpp
+  src/interval/interval_root_finder.cpp
+  src/ccd/rigid/broad_phase.cpp
+  src/ccd/rigid/rigid_body_hash_grid.cpp
+  src/ccd/rigid/rigid_body_bvh.cpp
+  src/ccd/rigid/time_of_impact.cpp
+  src/ccd/rigid/rigid_trajectory_aabb.cpp
+  src/ccd/redon/time_of_impact.cpp
+  src/ccd/save_queries.cpp
+
+  src/geometry/intersection.cpp
+
+  src/io/serialize_json.cpp
+  src/io/read_rb_scene.cpp
+  src/io/read_obj.cpp
+  src/io/write_obj.cpp
+  src/io/write_gltf.cpp
+
+  src/physics/mass.cpp
+  src/utils/mesh_selector.cpp
+  src/physics/rigid_body.cpp
+  src/physics/rigid_body_assembler.cpp
+  src/physics/rigid_body_problem.cpp
+
+  src/barrier/barrier.cpp
+  src/barrier/barrier_chorner.cpp
+
+  src/opt/distance_barrier_constraint.cpp
+  src/opt/collision_constraint.cpp
+  src/opt/optimization_problem.cpp
+  src/opt/optimization_results.cpp
+
+  src/problems/barrier_problem.cpp
+
+  src/solvers/newton_solver.cpp
+  src/solvers/ipc_solver.cpp
+  src/solvers/homotopy_solver.cpp
+  src/solvers/solver_factory.cpp
+  # src/solvers/line_search.cpp
+
+  src/problems/rigid_body_collision_constraint.cpp
+  src/problems/distance_barrier_rb_problem.cpp
+  src/problems/split_distance_barrier_rb_problem.cpp
+  src/problems/problem_factory.cpp
+
+  src/time_stepper/sympletic_euler_time_stepper.cpp
+  src/time_stepper/verlet_time_stepper.cpp
+  src/time_stepper/exponential_euler_time_stepper.cpp
+  src/time_stepper/dmv_time_stepper.cpp
+  src/time_stepper/time_stepper_factory.cpp
+
+  src/utils/tensor.cpp
+  src/utils/eigen_ext.cpp
+  src/utils/regular_2d_grid.cpp
+  src/utils/get_rss.cpp
+
+  src/SimState.cpp
+  src/logger.cpp
+  src/profiler.cpp
+)
+target_include_directories(ipc_rigid PUBLIC src)
+add_library(ipc::rigid ALIAS ipc_rigid)
+
+# Autogenerated files ----------------------------------------------------------
+# project_autogen(ipc_rigid time_of_impact_coeff.py time_of_impact_coeff.tpp auto_time_of_impact_coeff .ipp)
+
+################################################################################
+# Optional Definitions
+################################################################################
+
+# Directory paths
+set(RIGID_IPC_MESH_DIR ${CMAKE_CURRENT_SOURCE_DIR}/meshes)
+target_compile_definitions(ipc_rigid PUBLIC RIGID_IPC_MESHES_DIR=\"${RIGID_IPC_MESH_DIR}\")
+
+if(RIGID_IPC_WITH_DERIVATIVE_CHECK)
+  target_compile_definitions(ipc_rigid PUBLIC RIGID_IPC_WITH_DERIVATIVE_CHECK)
+endif()
+
+if(RIGID_IPC_WITH_PROFILING)
+  message(STATUS "Profiling Enabled")
+  target_compile_definitions(ipc_rigid PUBLIC RIGID_IPC_PROFILE_FUNCTIONS)
+endif()
+
+# For MSVC, do not use the min and max macros.
+target_compile_definitions(ipc_rigid PUBLIC NOMINMAX)
+
+################################################################################
+# Required Libraries
+################################################################################
+
+# Extra warnings
+include(rigid_ipc_warnings)
+target_link_libraries(ipc_rigid PRIVATE ipc::rigid::warnings)
+
+# libigl
+include(eigen)
+include(libigl)
+target_link_libraries(ipc_rigid PUBLIC
+  Eigen3::Eigen
+  igl::core
+  igl::predicates
+)
+
+# JSON Parser
+include(json)
+target_link_libraries(ipc_rigid PUBLIC nlohmann_json::nlohmann_json)
+
+# Logger
+include(spdlog)
+target_link_libraries(ipc_rigid PUBLIC spdlog::spdlog)
+
+# Finite Differences
+include(finite_diff)
+target_link_libraries(ipc_rigid PUBLIC finitediff::finitediff)
+
+# Boost
+include(boost)
+target_link_libraries(ipc_rigid PUBLIC Boost::boost)
+
+# TBB
+include(onetbb)
+target_link_libraries(ipc_rigid PUBLIC TBB::tbb)
+
+# MSCCD
+include(tight_inclusion)
+target_link_libraries(ipc_rigid PUBLIC tight_inclusion::tight_inclusion)
+
+# IPC Toolkit
+include(ipc_toolkit)
+target_link_libraries(ipc_rigid PUBLIC ipc::toolkit)
+
+# filib
+include(filib)
+target_link_libraries(ipc_rigid PUBLIC filib::filib)
+
+# SimpleBVH
+include(simple_bvh)
+target_link_libraries(ipc_rigid PUBLIC simple_bvh::simple_bvh)
+
+# tinygltf
+include(tinygltf)
+target_link_libraries(ipc_rigid PUBLIC tinygltf::tinygltf)
+
+################################################################################
+# Compiler options
+################################################################################
+
+## SIMD support
+if(RIGID_IPC_WITH_SIMD)
+  # Figure out SSE level support
+  message(STATUS "Seaching for SSE...")
+  find_package(SSE)
+  # Apple broke AVX instructions with clang:
+  # https://gitlab.com/libeigen/eigen/-/commit/71aa53dd6dfdc497324d9e87f59c4ba820191856
+  if(NOT APPLE)
+    # Figure out AVX level support
+    message(STATUS "Searching for AVX...")
+    find_package(AVX)
+    # Figure out FMA level support
+    message(STATUS "Searching for FMA...")
+    find_package(FMA)
+  else()
+    message(WARNING "Disabling AVX support: clang compiler shipped with XCode 11.[012] generates broken assembly with -macosx-version-min=10.15 and AVX enabled.")
+  endif()
+  # Add SSE, AVX, and FMA flags to compiler flags
+  string(REPLACE " " ";" SIMD_FLAGS "${SSE_FLAGS} ${AVX_FLAGS} ${FMA_FLAGS}")
+  target_compile_options(ipc_rigid PUBLIC ${SIMD_FLAGS})
+endif()
+
+# Use C++17
+target_compile_features(ipc_rigid PUBLIC cxx_std_17)
+
+################################################################################
+# Simulations Executable
+################################################################################
+
+add_executable(rigid_ipc_sim src/main.cpp)
+if(RIGID_IPC_WITH_OPENGL)
+    target_sources(rigid_ipc_sim PUBLIC
+      src/viewer/imgui_ext.cpp
+      src/viewer/viewer_data.cpp
+      src/viewer/UISimState.cpp
+      src/viewer/UIMenu.cpp
+    )
+endif()
+
+target_link_libraries(rigid_ipc_sim PUBLIC ipc::rigid)
+
+include(cli11)
+target_link_libraries(rigid_ipc_sim PUBLIC CLI11::CLI11)
+
+if(RIGID_IPC_WITH_OPENGL)
+    target_compile_definitions(rigid_ipc_sim PUBLIC RIGID_IPC_WITH_OPENGL)
+
+    # Charlie Tangora's gif-h library
+    include(gif_h)
+    target_link_libraries(rigid_ipc_sim PRIVATE gif_h::gif_h)
+
+    # Polyscope visualization library
+    include(polyscope)
+    target_link_libraries(rigid_ipc_sim PUBLIC polyscope::polyscope)
+endif()
+
+################################################################################
+# Tools
+################################################################################
+if(RIGID_IPC_WITH_TOOLS)
+  add_subdirectory(src/tools)
+endif()
+
+################################################################################
+# Tests
+################################################################################
+
+# Enable unit testing at the root level
+if(RIGID_IPC_WITH_UNIT_TESTS)
+    include(CTest)
+    enable_testing()
+
+    # Include Catch2 and provide function `catch_discover_tests` to register tests.
+    include(catch2)
+    FetchContent_GetProperties(catch2)
+    include("${catch2_SOURCE_DIR}/contrib/Catch.cmake")
+
+    add_subdirectory(tests)
+endif()
+
+################################################################################
+# Comparisons to other methods
+################################################################################
+if(RIGID_IPC_WITH_COMPARISONS)
+  add_subdirectory(comparisons)
+endif()
+
+################################################################################
+# Python bindings
+################################################################################
+
+if(RIGID_IPC_WITH_PYTHON)
+  add_subdirectory(python)
+endif()

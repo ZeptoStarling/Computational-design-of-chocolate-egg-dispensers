@@ -1,0 +1,142 @@
+{
+    "max_iterations": 60,
+    "timestep": 0.1,
+    "scene_type": "distance_barrier_rb_problem",
+    "distance_barrier_constraint": {
+        "initial_barrier_activation_distance": 0.01,
+        "detection_method": "hash_grid",
+        "use_distance_hashgrid": true,
+        "custom_hashgrid_cellsize": -1
+    },
+    "homotopy_solver": {
+        "e_b": 1e-10,
+        "m": 1,
+        "t_init": 1,
+        "t_inc": 10,
+        "c": 0.01,
+        "inner_solver": "newton_solver"
+    },
+    "newton_solver": {
+        "max_iterations": 1000
+    },
+    "rigid_body_problem": {
+        "coefficient_restitution": 1.0,
+        "gravity": [
+            0.0,
+            0.0
+        ],
+        "rigid_bodies": [
+            {
+                "vertices": [
+                    [
+                        -1,
+                        -1
+                    ],
+                    [
+                        -1,
+                        1
+                    ],
+                    [
+                        1,
+                        1
+                    ],
+                    [
+                        1,
+                        -1
+                    ]
+                ],
+                "position": [
+                    -3.0,
+                    0.0
+                ],
+                "is_dof_fixed": [
+                    false,
+                    false,
+                    false
+                ],
+                "edges": [
+                    [
+                        0,
+                        1
+                    ],
+                    [
+                        1,
+                        2
+                    ],
+                    [
+                        2,
+                        3
+                    ],
+                    [
+                        3,
+                        0
+                    ]
+                ],
+                "rotation": [
+                    45
+                ],
+                "linear_velocity": [
+                    1.0,
+                    0.0
+                ],
+                "angular_velocity": [
+                    0.0
+                ]
+            },
+            {
+                "vertices": [
+                    [
+                        -1,
+                        -1
+                    ],
+                    [
+                        -1,
+                        1
+                    ],
+                    [
+                        1,
+                        1
+                    ],
+                    [
+                        1,
+                        -1
+                    ]
+                ],
+                "position": [
+                    3.0,
+                    0.0
+                ],
+                "is_dof_fixed": [
+                    false,
+                    false,
+                    false
+                ],
+                "edges": [
+                    [
+                        0,
+                        1
+                    ],
+                    [
+                        1,
+                        2
+                    ],
+                    [
+                        2,
+                        3
+                    ],
+                    [
+                        3,
+                        0
+                    ]
+                ],
+                "linear_velocity": [
+                    0.0,
+                    0.0
+                ],
+                "angular_velocity": [
+                    0.0
+                ]
+            }
+        ]
+    }
+}

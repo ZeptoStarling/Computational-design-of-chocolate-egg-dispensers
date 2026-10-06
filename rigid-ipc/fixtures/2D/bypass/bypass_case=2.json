@@ -1,0 +1,41 @@
+{
+    "max_iterations": 4,
+    "timestep": 0.05,
+    "scene_type": "distance_barrier_rb_problem",
+    "distance_barrier_constraint": {
+        "initial_barrier_activation_distance": 0.01
+    },
+    "rigid_body_problem": {
+        "gravity": [0.0, -9.8],
+        "rigid_bodies": [{
+            "vertices": [
+                [-1, -1],
+                [1, -1],
+                [1, 1],
+                [-1, 1]
+            ],
+            "edges": [
+                [0, 1],
+                [1, 2],
+                [2, 3],
+                [3, 0]
+            ],
+            "position": [10.2, 10],
+            "linear_velocity": [0.0, -70]
+        }, {
+            "vertices": [
+                [-10, 0],
+                [10, 0],
+                [10, 0.1],
+                [-10, 0.1]
+            ],
+            "edges": [
+                [0, 1],
+                [1, 2],
+                [2, 3],
+                [3, 0]
+            ],
+            "type": "static"
+        }]
+    }
+}
