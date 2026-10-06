@@ -1,0 +1,78 @@
+{
+  "representation": "high_res_mesh",
+  "funnel_points_per_side": 1024,
+  "circle_segments": 1024,
+  "requested_coefficient_friction": 0.2,
+  "reported_coefficient_friction": 0.2,
+  "simulation": {
+    "timestep": 0.0005,
+    "frames": 5001,
+    "simulated_time": 2.5,
+    "friction_iterations": 10,
+    "static_friction_speed_bound": 0.001
+  },
+  "left": {
+    "radius": 1.0,
+    "initial_position": [
+      -1.4,
+      5.6
+    ],
+    "final_position": [
+      1.7948426795437324,
+      -14.40099664996002
+    ],
+    "final_speed": 18.111169640166192,
+    "maximum_speed": 18.111169640166192,
+    "minimum_smooth_reference_wall_gap": 0.0009887054936428274,
+    "first_smooth_reference_wall_contact": 0.8150000000000001,
+    "maximum_absolute_angular_velocity": 2.134889285973607,
+    "final_angular_velocity": -2.134889285973607,
+    "total_rotation_change": -3.479612186702996,
+    "wall_tangential_speed": {
+      "samples": 708,
+      "mean_abs": 2.8343519190276276,
+      "max_abs": 6.497150019973691,
+      "final_abs": 3.1407171239674283
+    }
+  },
+  "right": {
+    "radius": 1.0,
+    "initial_position": [
+      1.0,
+      4.5
+    ],
+    "final_position": [
+      -1.8106009189745993,
+      -22.553773654355854
+    ],
+    "final_speed": 22.533489346282252,
+    "maximum_speed": 22.533489346282252,
+    "minimum_smooth_reference_wall_gap": 0.0009850009603002974,
+    "first_smooth_reference_wall_contact": 0.7525000000000001,
+    "maximum_absolute_angular_velocity": 0.7305659407615406,
+    "final_angular_velocity": 0.4764349631249942,
+    "total_rotation_change": 0.8607783241207501,
+    "wall_tangential_speed": {
+      "samples": 248,
+      "mean_abs": 5.9620214255382855,
+      "max_abs": 7.272563904090509,
+      "final_abs": 7.143153374437607
+    }
+  },
+  "pair": {
+    "first_ideal_circle_contact": 0.8995,
+    "minimum_ideal_circle_gap": 0.0009875575739988207,
+    "final_ideal_circle_gap": 6.914426309387629,
+    "relative_tangential_speed": {
+      "samples": 149,
+      "mean_abs": 3.513756938733581,
+      "max_abs": 3.918181791898122,
+      "final_abs": 3.811807019841825
+    }
+  },
+  "timing": {
+    "real_seconds": 10.26,
+    "user_seconds": 30.96,
+    "sys_seconds": 44.77
+  }
+}

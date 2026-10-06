@@ -1,0 +1,49 @@
+{
+  "drop": {
+    "left_center": [
+      -1.0004994305777555,
+      1.7066506481456707
+    ],
+    "right_center": [
+      1.0004994305777555,
+      1.7066506481456707
+    ],
+    "left_speed": 0.0,
+    "right_speed": 0.0,
+    "stable_arch": true
+  },
+  "restart_from_arch": {
+    "left_center": [
+      -1.0004994305777555,
+      1.7066506481456707
+    ],
+    "right_center": [
+      1.0004994305777555,
+      1.7066506481456707
+    ],
+    "left_speed": 0.0,
+    "right_speed": 0.0,
+    "stable_arch": true
+  },
+  "perturbed_restart": {
+    "vertical_perturbation": 1e-06,
+    "left_center": [
+      -1.000499586473924,
+      1.7066506702933173
+    ],
+    "right_center": [
+      1.0004991581876501,
+      1.7066499122266192
+    ],
+    "left_speed": 0.0,
+    "right_speed": 0.0,
+    "stable_arch": true
+  },
+  "force_balance": {
+    "left_wall_force_over_mg": 2.0329514449264163,
+    "right_wall_force_over_mg": 2.0329514449264146,
+    "pair_force_over_mg": 1.7699976207408872,
+    "equilibrium_residual": 1.2609709600486848e-15,
+    "nonnegative_solution": true
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "angle_degrees": 30.0,
+  "coefficient_friction": 0.3,
+  "critical_friction_coefficient": 0.19245008972987523,
+  "expected_regime": "rolling",
+  "first_contact_time": 0.0,
+  "minimum_gap": 0.00098958882328537,
+  "fit_interval": [
+    0.1,
+    1.1
+  ],
+  "downhill_acceleration": {
+    "predicted": 3.2699999999999996,
+    "measured": 3.271196158671704,
+    "absolute_error": 0.001196158671704417,
+    "relative_error": 0.00036579775893101445
+  },
+  "angular_acceleration": {
+    "predicted": 3.2699999999999996,
+    "measured": 3.2712051656557883,
+    "absolute_error": 0.0012051656557887647,
+    "relative_error": 0.000368552188314607
+  },
+  "tangential_contact_speed": {
+    "mean_abs": 0.00037016554254617475,
+    "max_abs": 0.000661907905717185,
+    "final_abs": 0.0003661246227473214
+  }
+}

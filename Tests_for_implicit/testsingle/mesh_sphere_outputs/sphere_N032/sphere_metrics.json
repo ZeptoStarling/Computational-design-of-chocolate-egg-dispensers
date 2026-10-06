@@ -1,0 +1,60 @@
+{
+  "sphere_resolution": 32,
+  "fixed_funnel_points_per_side": 96,
+  "frames": 5001,
+  "simulated_time": 2.5,
+  "sphere": {
+    "segments": 32,
+    "radius": 1.0,
+    "initial_position": [
+      1.2,
+      5.0
+    ],
+    "final_position": [
+      -4.847145711114035,
+      -21.72185226310297
+    ]
+  },
+  "trajectory": {
+    "min_y": -21.72185226310297,
+    "max_abs_x": 4.847145711114035,
+    "max_speed": 22.512799053418664,
+    "final_speed": 22.512799053418664
+  },
+  "wall_contact": {
+    "first_contact_time": 0.7755,
+    "reference_contact_time": 0.7755,
+    "contact_time_error": 0.0,
+    "minimum_gap": 0.0009185697441798091,
+    "maximum_penetration": 0.0
+  },
+  "trajectory_error": {
+    "maximum": 0.054452041288088254,
+    "rms": 0.026143554894550204,
+    "final": 0.054452041288088254,
+    "x": {
+      "maximum_absolute": 0.04532673892620842,
+      "rms": 0.021762520507146072,
+      "final_signed": 0.04532673892620842,
+      "final_absolute": 0.04532673892620842
+    },
+    "y": {
+      "maximum_absolute": 0.030174683739105035,
+      "rms": 0.014487172384575487,
+      "final_signed": -0.030174683739105035,
+      "final_absolute": 0.030174683739105035
+    }
+  },
+  "gap_error": {
+    "maximum": 0.022864164853476865,
+    "rms": 0.012395942013926832
+  },
+  "runtime": {
+    "real_seconds": 1.13,
+    "user_seconds": 2.27,
+    "sys_seconds": 4.4
+  },
+  "mesh_json": "/home/austeja/Everything/EggDispenser/Implicit/testsforimplicit/testsingle/meshes_spheres/mesh_sphere_N032.json",
+  "simulation_json": "/home/austeja/Everything/EggDispenser/Implicit/testsforimplicit/testsingle/mesh_sphere_outputs/sphere_N032/sim.json",
+  "video": "/home/austeja/Everything/EggDispenser/Implicit/testsforimplicit/testsingle/mesh_sphere_outputs/sphere_N032/sphere_sweep_N032.mp4"
+}

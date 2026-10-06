@@ -1,0 +1,31 @@
+{
+  "representation": "mesh",
+  "circle_segments": 128,
+  "angle_degrees": 30.0,
+  "coefficient_friction": 0.3,
+  "critical_friction_coefficient": 0.19245008972987523,
+  "expected_regime": "rolling",
+  "first_contact_time": 0.0,
+  "minimum_smooth_reference_gap": 0.0006984927653257422,
+  "fit_interval": [
+    0.1,
+    1.1
+  ],
+  "downhill_acceleration": {
+    "predicted": 3.2699999999999996,
+    "measured": 2.4424871288787853,
+    "absolute_error": 0.8275128711212143,
+    "relative_error": 0.2530620400982307
+  },
+  "angular_acceleration": {
+    "predicted": 3.2699999999999996,
+    "measured": 2.4052302923212734,
+    "absolute_error": 0.8647697076787262,
+    "relative_error": 0.26445556809746984
+  },
+  "tangential_contact_speed": {
+    "mean_abs": 0.013469796760577331,
+    "max_abs": 0.06487720679773012,
+    "final_abs": 0.11275161350896479
+  }
+}

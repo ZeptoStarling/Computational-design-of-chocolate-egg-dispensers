@@ -1,0 +1,31 @@
+{
+  "fixed_funnel_points_per_side": 96,
+  "reference": "/home/austeja/Everything/EggDispenser/Implicit/testsforimplicit/testsingle/output/sim.json",
+  "sphere_results": [
+    {
+      "sphere_resolution": 24,
+      "maximum_trajectory_error": 0.10797138319249067,
+      "rms_trajectory_error": 0.05152885672888387
+    },
+    {
+      "sphere_resolution": 32,
+      "maximum_trajectory_error": 0.035262686914011375,
+      "rms_trajectory_error": 0.0169489946632723
+    },
+    {
+      "sphere_resolution": 48,
+      "maximum_trajectory_error": 0.09632258696952391,
+      "rms_trajectory_error": 0.04598321388660069
+    },
+    {
+      "sphere_resolution": 64,
+      "maximum_trajectory_error": 0.035262686579466615,
+      "rms_trajectory_error": 0.01694899459667831
+    },
+    {
+      "sphere_resolution": 96,
+      "maximum_trajectory_error": 0.03526268661426667,
+      "rms_trajectory_error": 0.016948994595981027
+    }
+  ]
+}

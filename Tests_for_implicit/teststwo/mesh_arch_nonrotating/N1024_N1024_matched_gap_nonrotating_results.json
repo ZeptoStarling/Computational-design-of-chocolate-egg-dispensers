@@ -1,0 +1,39 @@
+{
+  "test": "N1024_N1024_matched_gap_nonrotating",
+  "funnel_points_per_side": 1024,
+  "circle_segments": 1024,
+  "rotation_fixed": true,
+  "matched_gap": {
+    "implicit_y": 1.7066506481456707,
+    "matched_y": 1.706647719107505,
+    "vertical_adjustment": -2.929038165788711e-06,
+    "target_left_wall_gap": 0.0009987794389461069,
+    "target_right_wall_gap": 0.0009987794389461069,
+    "matched_left_wall_gap": 0.0009987794389462248,
+    "matched_right_wall_gap": 0.0009987794389460314,
+    "maximum_gap_error": 1.1796119636642288e-16
+  },
+  "run": {
+    "initial_left_wall_gap": 0.0009987794389462248,
+    "initial_right_wall_gap": 0.0009987794389460314,
+    "initial_pair_gap": 0.000998861155510955,
+    "final_left_center": [
+      -1.0004998226913697,
+      1.7066493521113
+    ],
+    "final_right_center": [
+      1.0004998226913677,
+      1.7066493521113026
+    ],
+    "final_left_speed": 0.0,
+    "final_right_speed": 0.0,
+    "final_left_rotation": 0.0,
+    "final_right_rotation": 0.0,
+    "final_left_angular_velocity": 0.0,
+    "final_right_angular_velocity": 0.0,
+    "final_left_wall_gap": 0.0009992399828256898,
+    "final_right_wall_gap": 0.0009992399828287742,
+    "final_pair_gap": 0.0009996453827374463,
+    "stable_arch": true
+  }
+}

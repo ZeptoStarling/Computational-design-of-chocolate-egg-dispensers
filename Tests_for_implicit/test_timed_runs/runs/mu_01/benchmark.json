@@ -1,0 +1,78 @@
+{
+  "requested_coefficient_friction": 0.1,
+  "reported_coefficient_friction": 0.1,
+  "simulation": {
+    "timestep": 0.0005,
+    "frames": 5001,
+    "simulated_time": 2.5,
+    "friction_iterations": 10,
+    "static_friction_speed_bound": 0.001
+  },
+  "left": {
+    "radius": 1.0,
+    "initial_position": [
+      -1.4,
+      5.6
+    ],
+    "final_position": [
+      2.3629200430231694,
+      -15.932130977140423
+    ],
+    "final_speed": 19.107333599242562,
+    "maximum_speed": 19.107333599242562,
+    "minimum_wall_gap": 0.0009799363619129586,
+    "maximum_penetration": 0.0,
+    "first_wall_contact": 0.8150000000000001,
+    "maximum_absolute_angular_velocity": 1.8947468138286183,
+    "final_angular_velocity": -1.8947468138277301,
+    "total_rotation_change": -3.11171839511837,
+    "wall_tangential_speed": {
+      "samples": 565,
+      "mean_abs": 3.6373675185391963,
+      "max_abs": 6.497149870661715,
+      "final_abs": 3.753189616003693
+    }
+  },
+  "right": {
+    "radius": 1.0,
+    "initial_position": [
+      1.0,
+      4.5
+    ],
+    "final_position": [
+      -1.692581353438118,
+      -24.053569772336086
+    ],
+    "final_speed": 23.43684453277721,
+    "maximum_speed": 23.43684453277721,
+    "minimum_wall_gap": 0.0009650264738547687,
+    "maximum_penetration": 0.0,
+    "first_wall_contact": 0.7525000000000001,
+    "maximum_absolute_angular_velocity": 0.7382271611394431,
+    "final_angular_velocity": 0.36670572609209806,
+    "total_rotation_change": 0.685406904927591,
+    "wall_tangential_speed": {
+      "samples": 214,
+      "mean_abs": 6.556536280285085,
+      "max_abs": 8.086156202326263,
+      "final_abs": 8.086156202326263
+    }
+  },
+  "pair": {
+    "first_contact": 0.892,
+    "minimum_gap": 0.000982916658920363,
+    "final_gap": 7.077712249284433,
+    "maximum_penetration": 0.0,
+    "relative_tangential_speed": {
+      "samples": 174,
+      "mean_abs": 3.879379877102297,
+      "max_abs": 4.199580319477285,
+      "final_abs": 4.141031071352919
+    }
+  },
+  "timing": {
+    "real_seconds": 2.6,
+    "user_seconds": 6.04,
+    "sys_seconds": 13.11
+  }
+}

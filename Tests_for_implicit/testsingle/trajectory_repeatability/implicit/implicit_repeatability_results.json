@@ -1,0 +1,146 @@
+{
+  "representation": "implicit",
+  "varied_initial_positions": [
+    {
+      "run": 1,
+      "position": [
+        1.1499719235272048,
+        5.0
+      ]
+    },
+    {
+      "run": 2,
+      "position": [
+        0.9061015016742411,
+        5.0
+      ]
+    },
+    {
+      "run": 3,
+      "position": [
+        1.395123905552246,
+        5.0
+      ]
+    },
+    {
+      "run": 4,
+      "position": [
+        1.0791839131197558,
+        5.0
+      ]
+    },
+    {
+      "run": 5,
+      "position": [
+        1.1210470136930855,
+        5.0
+      ]
+    },
+    {
+      "run": 6,
+      "position": [
+        1.0161968094270446,
+        5.0
+      ]
+    },
+    {
+      "run": 7,
+      "position": [
+        1.2396049012373167,
+        5.0
+      ]
+    },
+    {
+      "run": 8,
+      "position": [
+        0.997012694357621,
+        5.0
+      ]
+    },
+    {
+      "run": 9,
+      "position": [
+        0.9745601305701181,
+        5.0
+      ]
+    },
+    {
+      "run": 10,
+      "position": [
+        1.1597617608059496,
+        5.0
+      ]
+    }
+  ],
+  "repeated_position": [
+    1.2,
+    5.0
+  ],
+  "repeatability": {
+    "runs": [
+      {
+        "maximum": 0.0,
+        "rms": 0.0,
+        "final_dx": 0.0,
+        "final_dy": 0.0
+      },
+      {
+        "maximum": 0.0,
+        "rms": 0.0,
+        "final_dx": 0.0,
+        "final_dy": 0.0
+      },
+      {
+        "maximum": 0.0,
+        "rms": 0.0,
+        "final_dx": 0.0,
+        "final_dy": 0.0
+      },
+      {
+        "maximum": 0.0,
+        "rms": 0.0,
+        "final_dx": 0.0,
+        "final_dy": 0.0
+      },
+      {
+        "maximum": 0.0,
+        "rms": 0.0,
+        "final_dx": 0.0,
+        "final_dy": 0.0
+      },
+      {
+        "maximum": 0.0,
+        "rms": 0.0,
+        "final_dx": 0.0,
+        "final_dy": 0.0
+      },
+      {
+        "maximum": 0.0,
+        "rms": 0.0,
+        "final_dx": 0.0,
+        "final_dy": 0.0
+      },
+      {
+        "maximum": 0.0,
+        "rms": 0.0,
+        "final_dx": 0.0,
+        "final_dy": 0.0
+      },
+      {
+        "maximum": 0.0,
+        "rms": 0.0,
+        "final_dx": 0.0,
+        "final_dy": 0.0
+      },
+      {
+        "maximum": 0.0,
+        "rms": 0.0,
+        "final_dx": 0.0,
+        "final_dy": 0.0
+      }
+    ],
+    "maximum_of_maximum_errors": 0.0,
+    "mean_maximum_error": 0.0,
+    "mean_rms_error": 0.0
+  }
+}

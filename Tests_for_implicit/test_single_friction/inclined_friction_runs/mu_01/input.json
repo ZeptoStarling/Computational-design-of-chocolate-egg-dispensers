@@ -1,0 +1,55 @@
+{
+  "scene_type": "distance_barrier_rb_problem",
+  "solver": "ipc_solver",
+  "timestep": 0.0005,
+  "max_time": 2.0,
+  "spline_funnel": {
+    "enabled": true,
+    "r_bottom": 1.5,
+    "r_top": 11.892304845413264,
+    "s_bottom": 1.7320508075688772,
+    "s_top": 1.7320508075688772,
+    "height": 6.0
+  },
+  "rigid_body_problem": {
+    "coefficient_restitution": 0.0,
+    "gravity": [
+      0.0,
+      -9.81
+    ],
+    "rigid_bodies": [
+      {
+        "position": [
+          7.927203230275511,
+          4.867757454592008
+        ],
+        "rotation": [
+          0.0
+        ],
+        "linear_velocity": [
+          0.0,
+          0.0
+        ],
+        "angular_velocity": [
+          0.0
+        ],
+        "is_dof_fixed": [
+          false,
+          false,
+          false
+        ],
+        "radius": 1.0
+      }
+    ],
+    "coefficient_friction": 0.1
+  },
+  "friction_constraints": {
+    "static_friction_speed_bound": 0.001,
+    "iterations": 10
+  },
+  "ipc_solver": {
+    "convergence_criteria": "velocity",
+    "velocity_conv_tol": 0.0001,
+    "is_velocity_conv_tol_abs": true
+  }
+}

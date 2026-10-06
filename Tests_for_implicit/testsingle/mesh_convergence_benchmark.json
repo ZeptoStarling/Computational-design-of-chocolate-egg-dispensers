@@ -1,0 +1,45 @@
+{
+  "reference": "/home/austeja/Everything/EggDispenser/Implicit/testsforimplicit/testsingle/output/sim.json",
+  "mesh_results": [
+    {
+      "resolution": 8,
+      "maximum_trajectory_error": 0.4772084922676804,
+      "rms_trajectory_error": 0.22107698238132018
+    },
+    {
+      "resolution": 12,
+      "maximum_trajectory_error": 0.25361166587251277,
+      "rms_trajectory_error": 0.11918636343421585
+    },
+    {
+      "resolution": 16,
+      "maximum_trajectory_error": 0.18425625155780975,
+      "rms_trajectory_error": 0.0868037202014905
+    },
+    {
+      "resolution": 24,
+      "maximum_trajectory_error": 0.10776934908521209,
+      "rms_trajectory_error": 0.0509704707389567
+    },
+    {
+      "resolution": 32,
+      "maximum_trajectory_error": 0.06413689085772045,
+      "rms_trajectory_error": 0.03042429590154802
+    },
+    {
+      "resolution": 48,
+      "maximum_trajectory_error": 0.025812837930567125,
+      "rms_trajectory_error": 0.012352057388180843
+    },
+    {
+      "resolution": 64,
+      "maximum_trajectory_error": 0.022083631340838707,
+      "rms_trajectory_error": 0.01068533121207604
+    },
+    {
+      "resolution": 96,
+      "maximum_trajectory_error": 0.035262686914011375,
+      "rms_trajectory_error": 0.0169489946632723
+    }
+  ]
+}

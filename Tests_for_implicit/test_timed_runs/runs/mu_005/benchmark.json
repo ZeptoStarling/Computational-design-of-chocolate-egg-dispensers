@@ -1,0 +1,78 @@
+{
+  "requested_coefficient_friction": 0.05,
+  "reported_coefficient_friction": 0.05,
+  "simulation": {
+    "timestep": 0.0005,
+    "frames": 5001,
+    "simulated_time": 2.5,
+    "friction_iterations": 10,
+    "static_friction_speed_bound": 0.001
+  },
+  "left": {
+    "radius": 1.0,
+    "initial_position": [
+      -1.4,
+      5.6
+    ],
+    "final_position": [
+      2.615028622420631,
+      -16.503923822310732
+    ],
+    "final_speed": 19.4804299629032,
+    "maximum_speed": 19.4804299629032,
+    "minimum_wall_gap": 0.000978881811837251,
+    "maximum_penetration": 0.0,
+    "first_wall_contact": 0.8150000000000001,
+    "maximum_absolute_angular_velocity": 0.9091381576231683,
+    "final_angular_velocity": -0.9091381576227242,
+    "total_rotation_change": -1.4975203701495106,
+    "wall_tangential_speed": {
+      "samples": 516,
+      "mean_abs": 4.704616414042873,
+      "max_abs": 6.497149870661715,
+      "final_abs": 4.907639161037319
+    }
+  },
+  "right": {
+    "radius": 1.0,
+    "initial_position": [
+      1.0,
+      4.5
+    ],
+    "final_position": [
+      -1.9732684507074867,
+      -24.580636087218547
+    ],
+    "final_speed": 23.757274496259193,
+    "maximum_speed": 23.757274496259193,
+    "minimum_wall_gap": 0.0009650243714700579,
+    "maximum_penetration": 0.0,
+    "first_wall_contact": 0.7525000000000001,
+    "maximum_absolute_angular_velocity": 0.36908849127692545,
+    "final_angular_velocity": 0.18469996997727556,
+    "total_rotation_change": 0.3432324663443391,
+    "wall_tangential_speed": {
+      "samples": 192,
+      "mean_abs": 6.9939119878007245,
+      "max_abs": 8.516548924459217,
+      "final_abs": 8.516548924459217
+    }
+  },
+  "pair": {
+    "first_contact": 0.889,
+    "minimum_gap": 0.0009850764423715574,
+    "final_gap": 7.289012382454251,
+    "maximum_penetration": 0.0,
+    "relative_tangential_speed": {
+      "samples": 169,
+      "mean_abs": 4.853724419131655,
+      "max_abs": 5.150560381669558,
+      "final_abs": 5.138547834213579
+    }
+  },
+  "timing": {
+    "real_seconds": 2.31,
+    "user_seconds": 5.53,
+    "sys_seconds": 11.28
+  }
+}

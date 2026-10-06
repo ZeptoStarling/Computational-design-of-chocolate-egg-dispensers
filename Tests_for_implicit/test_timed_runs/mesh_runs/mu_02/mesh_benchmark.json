@@ -1,0 +1,78 @@
+{
+  "representation": "mesh",
+  "funnel_points_per_side": 128,
+  "circle_segments": 128,
+  "requested_coefficient_friction": 0.2,
+  "reported_coefficient_friction": 0.2,
+  "simulation": {
+    "timestep": 0.0005,
+    "frames": 5001,
+    "simulated_time": 2.5,
+    "friction_iterations": 10,
+    "static_friction_speed_bound": 0.001
+  },
+  "left": {
+    "radius": 1.0,
+    "initial_position": [
+      -1.4,
+      5.6
+    ],
+    "final_position": [
+      1.755499077468725,
+      -14.200790709588253
+    ],
+    "final_speed": 17.979782612971697,
+    "maximum_speed": 17.979782612971697,
+    "minimum_smooth_reference_wall_gap": 0.0006711843545144092,
+    "first_smooth_reference_wall_contact": 0.8150000000000001,
+    "maximum_absolute_angular_velocity": 2.1657906724419362,
+    "final_angular_velocity": -2.165790672441048,
+    "total_rotation_change": -3.5211853050350475,
+    "wall_tangential_speed": {
+      "samples": 706,
+      "mean_abs": 2.7515919185511275,
+      "max_abs": 6.497149870588997,
+      "final_abs": 2.9722034684649374
+    }
+  },
+  "right": {
+    "radius": 1.0,
+    "initial_position": [
+      1.0,
+      4.5
+    ],
+    "final_position": [
+      -1.8673035869712677,
+      -22.476143821191243
+    ],
+    "final_speed": 22.48669712828519,
+    "maximum_speed": 22.48669712828519,
+    "minimum_smooth_reference_wall_gap": 0.0006746827424042312,
+    "first_smooth_reference_wall_contact": 0.7525000000000001,
+    "maximum_absolute_angular_velocity": 0.8084481553678607,
+    "final_angular_velocity": 0.6200179817454909,
+    "total_rotation_change": 1.1014910343310755,
+    "wall_tangential_speed": {
+      "samples": 259,
+      "mean_abs": 5.8260831295913595,
+      "max_abs": 7.134845194083998,
+      "final_abs": 6.935000688118319
+    }
+  },
+  "pair": {
+    "first_ideal_circle_contact": 0.9,
+    "minimum_ideal_circle_gap": 0.00045203919701375384,
+    "final_ideal_circle_gap": 7.0336132453847515,
+    "relative_tangential_speed": {
+      "samples": 142,
+      "mean_abs": 3.6432762100959604,
+      "max_abs": 4.063472771408941,
+      "final_abs": 3.982142383459696
+    }
+  },
+  "timing": {
+    "real_seconds": 1.77,
+    "user_seconds": 5.79,
+    "sys_seconds": 6.48
+  }
+}

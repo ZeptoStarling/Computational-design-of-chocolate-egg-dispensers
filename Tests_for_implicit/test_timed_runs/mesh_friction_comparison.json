@@ -1,0 +1,626 @@
+{
+  "no_friction": {
+    "representation": "mesh",
+    "funnel_points_per_side": 128,
+    "circle_segments": 128,
+    "requested_coefficient_friction": null,
+    "reported_coefficient_friction": 0.0,
+    "simulation": {
+      "timestep": 0.0005,
+      "frames": 5001,
+      "simulated_time": 2.5,
+      "friction_iterations": 1,
+      "static_friction_speed_bound": 0.001
+    },
+    "left": {
+      "radius": 1.0,
+      "initial_position": [
+        -1.4,
+        5.6
+      ],
+      "final_position": [
+        2.7712269148416317,
+        -16.737838512150052
+      ],
+      "final_speed": 19.629027929301223,
+      "maximum_speed": 19.629027929301223,
+      "minimum_smooth_reference_wall_gap": 0.0008026688362079426,
+      "first_smooth_reference_wall_contact": 0.8150000000000001,
+      "maximum_absolute_angular_velocity": 0.12716665765808396,
+      "final_angular_velocity": 0.11435209046489758,
+      "total_rotation_change": 0.18984837081063818,
+      "wall_tangential_speed": {
+        "samples": 458,
+        "mean_abs": 5.719376776942243,
+        "max_abs": 7.166243900933294,
+        "final_abs": 5.83811092693831
+      }
+    },
+    "right": {
+      "radius": 1.0,
+      "initial_position": [
+        1.0,
+        4.5
+      ],
+      "final_position": [
+        -1.808227748008184,
+        -25.345045339368518
+      ],
+      "final_speed": 24.210003565272864,
+      "maximum_speed": 24.210003565272864,
+      "minimum_smooth_reference_wall_gap": 0.0006812579168007371,
+      "first_smooth_reference_wall_contact": 0.7525000000000001,
+      "maximum_absolute_angular_velocity": 0.07153638516026878,
+      "final_angular_velocity": -0.022077078299896635,
+      "total_rotation_change": -0.025325662377998197,
+      "wall_tangential_speed": {
+        "samples": 205,
+        "mean_abs": 7.531230318755399,
+        "max_abs": 9.169653584066525,
+        "final_abs": 9.169653584066525
+      }
+    },
+    "pair": {
+      "first_ideal_circle_contact": 0.887,
+      "minimum_ideal_circle_gap": 0.0004844390253966324,
+      "final_ideal_circle_gap": 7.74963662787558,
+      "relative_tangential_speed": {
+        "samples": 75,
+        "mean_abs": 5.6501114499408915,
+        "max_abs": 5.762761236080892,
+        "final_abs": 5.7367248847302825
+      }
+    },
+    "timing": {
+      "real_seconds": 1.43,
+      "user_seconds": 4.08,
+      "sys_seconds": 4.91
+    }
+  },
+  "mu_0": {
+    "representation": "mesh",
+    "funnel_points_per_side": 128,
+    "circle_segments": 128,
+    "requested_coefficient_friction": 0.0,
+    "reported_coefficient_friction": 0.0,
+    "simulation": {
+      "timestep": 0.0005,
+      "frames": 5001,
+      "simulated_time": 2.5,
+      "friction_iterations": 10,
+      "static_friction_speed_bound": 0.001
+    },
+    "left": {
+      "radius": 1.0,
+      "initial_position": [
+        -1.4,
+        5.6
+      ],
+      "final_position": [
+        2.7712269148476203,
+        -16.737838512178026
+      ],
+      "final_speed": 19.629027929330306,
+      "maximum_speed": 19.629027929330306,
+      "minimum_smooth_reference_wall_gap": 0.0008026688361633116,
+      "first_smooth_reference_wall_contact": 0.8150000000000001,
+      "maximum_absolute_angular_velocity": 0.12716665762604537,
+      "final_angular_velocity": 0.11435209043220151,
+      "total_rotation_change": 0.18984837075820896,
+      "wall_tangential_speed": {
+        "samples": 458,
+        "mean_abs": 5.7193767769368105,
+        "max_abs": 7.166243900933294,
+        "final_abs": 5.838110929824574
+      }
+    },
+    "right": {
+      "radius": 1.0,
+      "initial_position": [
+        1.0,
+        4.5
+      ],
+      "final_position": [
+        -1.808227747989879,
+        -25.345045339343038
+      ],
+      "final_speed": 24.2100035652509,
+      "maximum_speed": 24.2100035652509,
+      "minimum_smooth_reference_wall_gap": 0.0006812579168007371,
+      "first_smooth_reference_wall_contact": 0.7525000000000001,
+      "maximum_absolute_angular_velocity": 0.07153638516026878,
+      "final_angular_velocity": -0.022077078334167832,
+      "total_rotation_change": -0.025325662433186315,
+      "wall_tangential_speed": {
+        "samples": 205,
+        "mean_abs": 7.531230318938237,
+        "max_abs": 9.169653583366062,
+        "final_abs": 9.169653583366062
+      }
+    },
+    "pair": {
+      "first_ideal_circle_contact": 0.887,
+      "minimum_ideal_circle_gap": 0.0004844390253970765,
+      "final_ideal_circle_gap": 7.749636627822603,
+      "relative_tangential_speed": {
+        "samples": 75,
+        "mean_abs": 5.650111449840499,
+        "max_abs": 5.762761235974197,
+        "final_abs": 5.736724884624387
+      }
+    },
+    "timing": {
+      "real_seconds": 1.43,
+      "user_seconds": 4.47,
+      "sys_seconds": 5.36
+    }
+  },
+  "mu_005": {
+    "representation": "mesh",
+    "funnel_points_per_side": 128,
+    "circle_segments": 128,
+    "requested_coefficient_friction": 0.05,
+    "reported_coefficient_friction": 0.05,
+    "simulation": {
+      "timestep": 0.0005,
+      "frames": 5001,
+      "simulated_time": 2.5,
+      "friction_iterations": 10,
+      "static_friction_speed_bound": 0.001
+    },
+    "left": {
+      "radius": 1.0,
+      "initial_position": [
+        -1.4,
+        5.6
+      ],
+      "final_position": [
+        2.6671807301001973,
+        -16.54804956725377
+      ],
+      "final_speed": 19.509811674186576,
+      "maximum_speed": 19.509811674186576,
+      "minimum_smooth_reference_wall_gap": 0.000632753689009613,
+      "first_smooth_reference_wall_contact": 0.8150000000000001,
+      "maximum_absolute_angular_velocity": 0.3357461137005746,
+      "final_angular_velocity": -0.3357461137005746,
+      "total_rotation_change": -0.5518550821794402,
+      "wall_tangential_speed": {
+        "samples": 490,
+        "mean_abs": 5.221898789080639,
+        "max_abs": 6.714927593042413,
+        "final_abs": 5.402195232776456
+      }
+    },
+    "right": {
+      "radius": 1.0,
+      "initial_position": [
+        1.0,
+        4.5
+      ],
+      "final_position": [
+        -1.8787820898310887,
+        -24.596064912276542
+      ],
+      "final_speed": 23.762540673789943,
+      "maximum_speed": 23.762540673789943,
+      "minimum_smooth_reference_wall_gap": 0.0006796002605533591,
+      "first_smooth_reference_wall_contact": 0.7525000000000001,
+      "maximum_absolute_angular_velocity": 0.2655822253774256,
+      "final_angular_velocity": 0.2505213934831385,
+      "total_rotation_change": 0.4365284601859774,
+      "wall_tangential_speed": {
+        "samples": 213,
+        "mean_abs": 7.033192988203267,
+        "max_abs": 8.47663267497098,
+        "final_abs": 8.47663267497098
+      }
+    },
+    "pair": {
+      "first_ideal_circle_contact": 0.89,
+      "minimum_ideal_circle_gap": 0.000526201375413482,
+      "final_ideal_circle_gap": 7.243177427374183,
+      "relative_tangential_speed": {
+        "samples": 193,
+        "mean_abs": 5.52391393942904,
+        "max_abs": 5.759483039251974,
+        "final_abs": 5.7373307481661815
+      }
+    },
+    "timing": {
+      "real_seconds": 1.6,
+      "user_seconds": 5.17,
+      "sys_seconds": 5.84
+    }
+  },
+  "mu_01": {
+    "representation": "mesh",
+    "funnel_points_per_side": 128,
+    "circle_segments": 128,
+    "requested_coefficient_friction": 0.1,
+    "reported_coefficient_friction": 0.1,
+    "simulation": {
+      "timestep": 0.0005,
+      "frames": 5001,
+      "simulated_time": 2.5,
+      "friction_iterations": 10,
+      "static_friction_speed_bound": 0.001
+    },
+    "left": {
+      "radius": 1.0,
+      "initial_position": [
+        -1.4,
+        5.6
+      ],
+      "final_position": [
+        2.3982360499601136,
+        -15.932240408511248
+      ],
+      "final_speed": 19.10811378818366,
+      "maximum_speed": 19.10811378818366,
+      "minimum_smooth_reference_wall_gap": 0.0008193310136055398,
+      "first_smooth_reference_wall_contact": 0.8150000000000001,
+      "maximum_absolute_angular_velocity": 0.9719906949703372,
+      "final_angular_velocity": -0.9719906949690049,
+      "total_rotation_change": -1.5893207213770897,
+      "wall_tangential_speed": {
+        "samples": 546,
+        "mean_abs": 4.450922158815208,
+        "max_abs": 6.497149870588997,
+        "final_abs": 4.598002714644572
+      }
+    },
+    "right": {
+      "radius": 1.0,
+      "initial_position": [
+        1.0,
+        4.5
+      ],
+      "final_position": [
+        -1.6689818029365113,
+        -24.083546015057998
+      ],
+      "final_speed": 23.45452291708536,
+      "maximum_speed": 23.45452291708536,
+      "minimum_smooth_reference_wall_gap": 0.0006779445325721944,
+      "first_smooth_reference_wall_contact": 0.7525000000000001,
+      "maximum_absolute_angular_velocity": 0.4458215596406384,
+      "final_angular_velocity": 0.2626804068921462,
+      "total_rotation_change": 0.4825445538263107,
+      "wall_tangential_speed": {
+        "samples": 244,
+        "mean_abs": 6.7803345330001745,
+        "max_abs": 8.234959548982527,
+        "final_abs": 8.234959548982527
+      }
+    },
+    "pair": {
+      "first_ideal_circle_contact": 0.893,
+      "minimum_ideal_circle_gap": 0.00047524702204571057,
+      "final_ideal_circle_gap": 7.1096676204042435,
+      "relative_tangential_speed": {
+        "samples": 172,
+        "mean_abs": 4.723711256445252,
+        "max_abs": 4.979272591408922,
+        "final_abs": 4.95325829658934
+      }
+    },
+    "timing": {
+      "real_seconds": 1.66,
+      "user_seconds": 5.35,
+      "sys_seconds": 6.24
+    }
+  },
+  "mu_02": {
+    "representation": "mesh",
+    "funnel_points_per_side": 128,
+    "circle_segments": 128,
+    "requested_coefficient_friction": 0.2,
+    "reported_coefficient_friction": 0.2,
+    "simulation": {
+      "timestep": 0.0005,
+      "frames": 5001,
+      "simulated_time": 2.5,
+      "friction_iterations": 10,
+      "static_friction_speed_bound": 0.001
+    },
+    "left": {
+      "radius": 1.0,
+      "initial_position": [
+        -1.4,
+        5.6
+      ],
+      "final_position": [
+        1.755499077468725,
+        -14.200790709588253
+      ],
+      "final_speed": 17.979782612971697,
+      "maximum_speed": 17.979782612971697,
+      "minimum_smooth_reference_wall_gap": 0.0006711843545144092,
+      "first_smooth_reference_wall_contact": 0.8150000000000001,
+      "maximum_absolute_angular_velocity": 2.1657906724419362,
+      "final_angular_velocity": -2.165790672441048,
+      "total_rotation_change": -3.5211853050350475,
+      "wall_tangential_speed": {
+        "samples": 706,
+        "mean_abs": 2.7515919185511275,
+        "max_abs": 6.497149870588997,
+        "final_abs": 2.9722034684649374
+      }
+    },
+    "right": {
+      "radius": 1.0,
+      "initial_position": [
+        1.0,
+        4.5
+      ],
+      "final_position": [
+        -1.8673035869712677,
+        -22.476143821191243
+      ],
+      "final_speed": 22.48669712828519,
+      "maximum_speed": 22.48669712828519,
+      "minimum_smooth_reference_wall_gap": 0.0006746827424042312,
+      "first_smooth_reference_wall_contact": 0.7525000000000001,
+      "maximum_absolute_angular_velocity": 0.8084481553678607,
+      "final_angular_velocity": 0.6200179817454909,
+      "total_rotation_change": 1.1014910343310755,
+      "wall_tangential_speed": {
+        "samples": 259,
+        "mean_abs": 5.8260831295913595,
+        "max_abs": 7.134845194083998,
+        "final_abs": 6.935000688118319
+      }
+    },
+    "pair": {
+      "first_ideal_circle_contact": 0.9,
+      "minimum_ideal_circle_gap": 0.00045203919701375384,
+      "final_ideal_circle_gap": 7.0336132453847515,
+      "relative_tangential_speed": {
+        "samples": 142,
+        "mean_abs": 3.6432762100959604,
+        "max_abs": 4.063472771408941,
+        "final_abs": 3.982142383459696
+      }
+    },
+    "timing": {
+      "real_seconds": 1.77,
+      "user_seconds": 5.79,
+      "sys_seconds": 6.48
+    }
+  },
+  "mu_03": {
+    "representation": "mesh",
+    "funnel_points_per_side": 128,
+    "circle_segments": 128,
+    "requested_coefficient_friction": 0.3,
+    "reported_coefficient_friction": 0.3,
+    "simulation": {
+      "timestep": 0.0005,
+      "frames": 5001,
+      "simulated_time": 2.5,
+      "friction_iterations": 10,
+      "static_friction_speed_bound": 0.001
+    },
+    "left": {
+      "radius": 1.0,
+      "initial_position": [
+        -1.4,
+        5.6
+      ],
+      "final_position": [
+        1.4826382142585144,
+        -13.14906280499421
+      ],
+      "final_speed": 17.302744569195465,
+      "maximum_speed": 17.302744569195465,
+      "minimum_smooth_reference_wall_gap": 0.0006595278518761738,
+      "first_smooth_reference_wall_contact": 0.8150000000000001,
+      "maximum_absolute_angular_velocity": 2.9417551891546267,
+      "final_angular_velocity": -2.941755189151962,
+      "total_rotation_change": -4.786933666445391,
+      "wall_tangential_speed": {
+        "samples": 803,
+        "mean_abs": 1.6341373909979873,
+        "max_abs": 6.4971498705917226,
+        "final_abs": 1.9656656940337847
+      }
+    },
+    "right": {
+      "radius": 1.0,
+      "initial_position": [
+        1.0,
+        4.5
+      ],
+      "final_position": [
+        -1.4923412089277739,
+        -20.49872350726283
+      ],
+      "final_speed": 21.252767632768858,
+      "maximum_speed": 21.252767632768858,
+      "minimum_smooth_reference_wall_gap": 0.0005864582781773819,
+      "first_smooth_reference_wall_contact": 0.7525000000000001,
+      "maximum_absolute_angular_velocity": 1.177067021639444,
+      "final_angular_velocity": 0.8118831603640686,
+      "total_rotation_change": 1.464446335147516,
+      "wall_tangential_speed": {
+        "samples": 298,
+        "mean_abs": 4.987922917082589,
+        "max_abs": 6.444895710694206,
+        "final_abs": 5.671674612957553
+      }
+    },
+    "pair": {
+      "first_ideal_circle_contact": 0.9075,
+      "minimum_ideal_circle_gap": 0.0006549503345794072,
+      "final_ideal_circle_gap": 5.928935300962765,
+      "relative_tangential_speed": {
+        "samples": 160,
+        "mean_abs": 2.5178512373647903,
+        "max_abs": 3.814608059220281,
+        "final_abs": 2.619446454611913
+      }
+    },
+    "timing": {
+      "real_seconds": 2.14,
+      "user_seconds": 7.13,
+      "sys_seconds": 8.23
+    }
+  },
+  "mu_04": {
+    "representation": "mesh",
+    "funnel_points_per_side": 128,
+    "circle_segments": 128,
+    "requested_coefficient_friction": 0.4,
+    "reported_coefficient_friction": 0.4,
+    "simulation": {
+      "timestep": 0.0005,
+      "frames": 5001,
+      "simulated_time": 2.5,
+      "friction_iterations": 10,
+      "static_friction_speed_bound": 0.001
+    },
+    "left": {
+      "radius": 1.0,
+      "initial_position": [
+        -1.4,
+        5.6
+      ],
+      "final_position": [
+        1.2438503689877776,
+        -12.090262506395977
+      ],
+      "final_speed": 16.633955955909077,
+      "maximum_speed": 16.633955955909077,
+      "minimum_smooth_reference_wall_gap": 0.0006514048057244537,
+      "first_smooth_reference_wall_contact": 0.8150000000000001,
+      "maximum_absolute_angular_velocity": 3.767547990430775,
+      "final_angular_velocity": -3.571481217157668,
+      "total_rotation_change": -5.851753433031064,
+      "wall_tangential_speed": {
+        "samples": 958,
+        "mean_abs": 1.3196553787946088,
+        "max_abs": 6.497149870588997,
+        "final_abs": 1.3893110551095156
+      }
+    },
+    "right": {
+      "radius": 1.0,
+      "initial_position": [
+        1.0,
+        4.5
+      ],
+      "final_position": [
+        -0.8415037334816018,
+        -17.43799191544282
+      ],
+      "final_speed": 19.29947367376992,
+      "maximum_speed": 19.29947367376992,
+      "minimum_smooth_reference_wall_gap": 0.0005825793489204756,
+      "first_smooth_reference_wall_contact": 0.7525000000000001,
+      "maximum_absolute_angular_velocity": 1.55062395431756,
+      "final_angular_velocity": 1.39526309074256,
+      "total_rotation_change": 2.4419156930877115,
+      "wall_tangential_speed": {
+        "samples": 368,
+        "mean_abs": 3.709126297728282,
+        "max_abs": 6.444895710694206,
+        "final_abs": 3.4640519526791396
+      }
+    },
+    "pair": {
+      "first_ideal_circle_contact": 0.9175,
+      "minimum_ideal_circle_gap": 0.0005053124003433496,
+      "final_ideal_circle_gap": 3.7399400314872935,
+      "relative_tangential_speed": {
+        "samples": 217,
+        "mean_abs": 1.1917965164456503,
+        "max_abs": 3.5458115500605043,
+        "final_abs": 1.0099226525338012
+      }
+    },
+    "timing": {
+      "real_seconds": 2.31,
+      "user_seconds": 7.64,
+      "sys_seconds": 8.89
+    }
+  },
+  "mu_05": {
+    "representation": "mesh",
+    "funnel_points_per_side": 128,
+    "circle_segments": 128,
+    "requested_coefficient_friction": 0.5,
+    "reported_coefficient_friction": 0.5,
+    "simulation": {
+      "timestep": 0.0005,
+      "frames": 5001,
+      "simulated_time": 2.5,
+      "friction_iterations": 10,
+      "static_friction_speed_bound": 0.001
+    },
+    "left": {
+      "radius": 1.0,
+      "initial_position": [
+        -1.4,
+        5.6
+      ],
+      "final_position": [
+        0.49388777667725237,
+        -7.175399256012148
+      ],
+      "final_speed": 13.158893069997577,
+      "maximum_speed": 13.158893069997577,
+      "minimum_smooth_reference_wall_gap": 0.0006386419540918009,
+      "first_smooth_reference_wall_contact": 0.8150000000000001,
+      "maximum_absolute_angular_velocity": 3.6014915394136926,
+      "final_angular_velocity": -2.6022290383433955,
+      "total_rotation_change": -4.468994574264829,
+      "wall_tangential_speed": {
+        "samples": 1593,
+        "mean_abs": 1.443816626832843,
+        "max_abs": 6.497149870588997,
+        "final_abs": 1.9321797906496887
+      }
+    },
+    "right": {
+      "radius": 1.0,
+      "initial_position": [
+        1.0,
+        4.5
+      ],
+      "final_position": [
+        0.5038513179025045,
+        -9.859323381999799
+      ],
+      "final_speed": 14.164482752923771,
+      "maximum_speed": 14.164482752923771,
+      "minimum_smooth_reference_wall_gap": 0.0005813678617541118,
+      "first_smooth_reference_wall_contact": 0.7525000000000001,
+      "maximum_absolute_angular_velocity": 2.2741675909624393,
+      "final_angular_velocity": 1.619937183169995,
+      "total_rotation_change": 2.908329953085359,
+      "wall_tangential_speed": {
+        "samples": 1091,
+        "mean_abs": 1.0040979820093274,
+        "max_abs": 6.444895710694206,
+        "final_abs": 1.46614238646583
+      }
+    },
+    "pair": {
+      "first_ideal_circle_contact": 0.9285,
+      "minimum_ideal_circle_gap": 0.00044264593128895413,
+      "final_ideal_circle_gap": 0.68394261976897,
+      "relative_tangential_speed": {
+        "samples": 1132,
+        "mean_abs": 0.25398933100745735,
+        "max_abs": 3.358799993906291,
+        "final_abs": 0.5908240990514669
+      }
+    },
+    "timing": {
+      "real_seconds": 4.84,
+      "user_seconds": 18.86,
+      "sys_seconds": 17.36
+    }
+  }
+}

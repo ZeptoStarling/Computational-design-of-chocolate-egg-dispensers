@@ -1,0 +1,21 @@
+{
+  "test": "seven_circle_multibody",
+  "simulation": {
+    "timestep": 0.0005,
+    "frames": 5001,
+    "simulated_time": 2.5
+  },
+  "result": {
+    "bottom_center_passed_through": true,
+    "remaining_circles_interlocked": true,
+    "maximum_final_speed_remaining": 1.9860273225978185e-12,
+    "circle_circle_contacts": 8,
+    "minimum_wall_gap": 0.0009687780341085528,
+    "minimum_pair_gap": 0.0009709494089347182,
+    "maximum_wall_penetration": 0.0,
+    "maximum_pair_penetration": 0.0,
+    "maximum_mirror_x_error": 0.0,
+    "maximum_mirror_y_error": 0.0,
+    "maximum_centerline_x_error": 2.250982388734293e-15
+  }
+}

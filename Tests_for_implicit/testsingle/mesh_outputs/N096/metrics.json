@@ -1,0 +1,46 @@
+{
+  "resolution": 96,
+  "frames": 5001,
+  "simulated_time": 2.5,
+  "sphere": {
+    "radius": 1.0,
+    "initial_position": [
+      1.2,
+      5.0
+    ],
+    "final_position": [
+      -4.847145711114035,
+      -21.72185226310297
+    ]
+  },
+  "trajectory": {
+    "min_y": -21.72185226310297,
+    "max_abs_x": 4.847145711114035,
+    "max_speed": 22.512799053418664,
+    "final_speed": 22.512799053418664
+  },
+  "wall_contact": {
+    "first_contact_time": 0.7755,
+    "reference_contact_time": 0.7755,
+    "contact_time_error": 0.0,
+    "minimum_gap": 0.0009185697441798091,
+    "maximum_penetration": 0.0
+  },
+  "trajectory_error": {
+    "maximum": 0.054452041288088254,
+    "rms": 0.026143554894550204,
+    "final": 0.054452041288088254
+  },
+  "gap_error": {
+    "maximum": 0.022864164853476865,
+    "rms": 0.012395942013926832
+  },
+  "runtime": {
+    "real_seconds": 0.98,
+    "user_seconds": 2.25,
+    "sys_seconds": 4.05
+  },
+  "mesh_json": "/home/austeja/Everything/EggDispenser/Implicit/testsforimplicit/testsingle/meshes/mesh_funnel_N096.json",
+  "simulation_json": "/home/austeja/Everything/EggDispenser/Implicit/testsforimplicit/testsingle/mesh_outputs/N096/sim.json",
+  "video": "/home/austeja/Everything/EggDispenser/Implicit/testsforimplicit/testsingle/mesh_outputs/N096/mesh_funnel_N096.mp4"
+}

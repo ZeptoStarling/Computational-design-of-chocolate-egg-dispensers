@@ -1,0 +1,35 @@
+{
+  "test": "single_sphere_frictionless_implicit",
+  "simulation": {
+    "timestep": 0.0005,
+    "frames": 5001,
+    "simulated_time": 2.5
+  },
+  "circle": {
+    "body_index": 0,
+    "radius": 1.0,
+    "initial_position": [
+      1.2,
+      5.0
+    ],
+    "initial_velocity": [
+      0.0,
+      0.0
+    ],
+    "final_position": [
+      -4.876383632170273,
+      -21.702139296286564
+    ],
+    "final_velocity": [
+      -3.5274270609502167,
+      -22.22602338434143
+    ],
+    "maximum_speed": 22.50419643425679,
+    "final_speed": 22.50419643425679
+  },
+  "wall_contact": {
+    "first_contact_time": 0.7755,
+    "minimum_gap": 0.0009645714763226731,
+    "maximum_penetration": 0.0
+  }
+}
